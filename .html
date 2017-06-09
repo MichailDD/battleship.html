@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
 <title>Battleship</title>
+<meta charset="utf-8">
 <style>
 body {
 	background-color: black;
@@ -19,24 +19,13 @@ div#messageArea {
 	top: 0px;
 	left: 0px;
 	color: rgb(83, 175, 19);
-}
+font-size: 3em;
+    }
 .hit {
 	background: url("ship.png") no-repeat center center;
 }
 .miss {
 	background: url("miss.png") no-repeat center center;
-}
-table {
-	border-spacing: 0px; 
-	/* could use border-collapse instead */
-	/* border-collapse: collapse; */
-	position: absolute;
-	left: 173px;
-	top: 98px;
-}
-td {
-	width: 94px;
-	height: 94px;
 }
 form {
 	position: absolute;
@@ -46,22 +35,50 @@ form {
 	background-color: rgb(83, 175, 19);
 }
 form input {
-	background-color: rgb(152, 207, 113);
+	background-color: #98CF71;
 	border-color: rgb(83, 175, 19);
 	font-size: 1em;
+}
+table {
+	border-spacing: 0px;
+	position: absolute;
+	left: 173px;
+	top: 98px;
+}
+td {
+	width: 94px;
+	height: 94px;
 }
 </style>
 </head>
 <body>
-<div id="board">
-<div id="messageArea"></div>
-<table>
+    <div id="board">
+       <script src="battleship.js"> </script>
+        <div id="messageArea"> 
+            
+            <script src="battleship.js"> 
+            var view ={
+                    displayMessage:function(msg){
+                        
+                        var messageArea=document.getElementById("messageArea");
+                        messageArea.innerHTML=msg;
+                    },
+            
+            </script>
+
+                    
+    
+        </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"> 
+</script>
+       
+        <table>
 <tr>
 <td id="00"></td> <td id="01"></td> <td id="02"></td> <td id="03"></td>
-<td id="04"></td> <td id="05"></td> <td id="06"></td>
+<td id="04"></td> <td id="05"></td> <td  id="06"></td>
 </tr>
 <tr>
-<td id="10"></td> <td id="11"></td> <td id="12"></td> <td id="13"></td>
+<td id="10"></td> <td id="11"></td> <td id="12"></td> <td  id="13"></td>
 <td id="14"></td> <td id="15"></td> <td id="16"></td>
 </tr>
 <tr>
@@ -90,7 +107,7 @@ form input {
 <input type="button" id="fireButton" value="Fire!">
 </form>
 </div>
-<script src="battleship.js">
-</script>
+    
+
 </body>
 </html>
